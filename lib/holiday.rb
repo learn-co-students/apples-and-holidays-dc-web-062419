@@ -18,14 +18,7 @@ def second_supply_for_fourth_of_july(holiday_hash)
   #   }
   # }
   holiday_hash[:summer][:fourth_of_july][1]
-=begin holiday_hash.map do |key, value|
-    
-    if key == :summer
-      key.map do |key, value|
-        
-    end
-  end
-=end
+
   # return the second element in the 4th of July array
 end
 
@@ -58,7 +51,7 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
-
+holiday_hash[:winter].values
 end
 
 def all_supplies_in_holidays(holiday_hash)
