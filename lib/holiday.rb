@@ -27,17 +27,14 @@ end
 
 
 def all_supplies_in_holidays(holiday_hash)
-  
-  
-  
-  
-  ## holiday_hash.each { |season, data| 
-  ##  puts season.to_s.capitalize! + ":"
-  ##  data.each { |holiday, supplies|
-  ##    puts " " + holiday.to_s.gsub("_"," ").split.map.join(' ')+ ": " + holiday_hash[season][holiday].flatten.join(", ")
-##  }  
-## }
-## end
+  holiday_hash.each { |season, data| 
+      puts season.to_s.capitalize! + ":" 
+      data.each { |holiday, supplies|
+      puts "  " + holiday.to_s.gsub("_"," ").split.map(&:capitalize).join(' ')+ ": " + holiday_hash[season][holiday].flatten.join(", ") 
+      } 
+    }
+end
+
 
 def all_holidays_with_bbq(holiday_hash)
   bbq_holidays = []
@@ -51,12 +48,27 @@ def all_holidays_with_bbq(holiday_hash)
   bbq_holidays
 end
 
- # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
+# return an array of holiday names (as symbols) where supply lists
+# include the string "BBQ"
 
 
-
-
+=begin
+holiday_supplies = {
+  :winter => {
+    :christmas => ["Lights", "Wreath"],
+    :new_years => ["Party Hats"]
+  },
+  :summer => {
+    :fourth_of_july => ["Fireworks", "BBQ"]
+  },
+  :fall => {
+    :thanksgiving => ["Turkey"]
+  },
+  :spring => {
+    :memorial_day => ["BBQ"]
+  }
+}
+=end
 
 
 
